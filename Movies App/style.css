@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,300&family=Mali:ital,wght@1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(40, 40, 116);
+    font-family: 'Poopins', sans-serif;
+    margin: 0;
+}
+header{
+    background-color: rgb(40, 40, 116);
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid rgb(10, 10, 96);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    color: white;
+}
+
+.search::placeholder{
+    color: white;
+}
+.search:focus{
+    outline: none;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    background-color: rgb(85, 141, 205);
+    overflow: hidden;
+    margin: 1rem;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+}
+
+.movie img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.movie-info{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-info h3{
+    margin: 0;
+    color: whitesmoke;
+}
+.movie-info span{
+    align-items: center;
+    padding: 3px 3px;
+
+}
+
+.movie-info span.green{
+    color: green;
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+
+
+
+
+
+
+.overview{
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s ease-in;
+    transform: translateY(100%);
+    max-height: 100%;
+    overflow: auto;
+    
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
